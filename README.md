@@ -26,8 +26,8 @@ Overall, I found this to be a great exercise to test knowledge of RAG/LLMs. The 
 
 I don't exactly know the intent of the exercise, so take the following with a grain of salt:
 - The initial code is quite opinionated, so it feels like the exercise is designed to be completed in a particular way. I feel like a large amount of my time was spent trying to understand the intent, rather than solving the problem. 
--- As an example, why was `embeddings=True` set for Llama? Am I meant to use Llama for embeddings as well or the provided MiniLM model?
--- The sample questions confused me to a certain extent. Are the sample questions supposed to be used as test cases/for the solution? Or are they purely used as examples?
+    - As an example, why was `embeddings=True` set for Llama? Am I meant to use Llama for embeddings as well or the provided MiniLM model?
+    - The sample questions confused me to a certain extent. Are the sample questions supposed to be used as test cases/for the solution? Or are they purely used as examples?
 - The README should be a bit clearer about the expected end result, maybe provide some basic examples. For example, it refers to the RAG part of the exercise as 'the model', while I consider that to be just one part of the overall solution.
 - The CSV is slightly messy (missing data, duplicate sample questions etc.), which to be fair is typical in real-world data projects. Not completely sure if that was intentional or not.
 - How involved is the solution expected to be? There are many things that could be tried or improved, of course. More on this below.
