@@ -10,6 +10,7 @@ import nltk
 from nltk.tokenize import sent_tokenize
 import ssl
 
+# NLTK failed SSL, so we need to disable it.
 try:
     _create_unverified_https_context = ssl._create_unverified_context
 except AttributeError:
@@ -22,12 +23,10 @@ EMBEDDING_DIMENSION = 384
 EMBEDDING_MAX_TOKENS = 256
 MODEL_PATH = "./resources/llama-2-7b-chat.Q4_K_M.gguf"
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 
 # Initialize clients and models
 client = MilvusClient("./resources/milvus_exercise.db")
-
 embedding_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 embedding_tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
 nltk.download('punkt_tab')
