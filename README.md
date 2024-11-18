@@ -54,6 +54,7 @@ python -m pytest test/test_model.py  # Takes a bit longer.
 - I would also improve the information the chunks contain. For example, it would be good to add the `title` of the case study to the chunk, so that the model knows which case study it is from, possibly with some formatting that will emphasise this (e.g. Markdown). 
 - It might also be worth pre-processing the text in some way, potentially also with an LLM. For example, to extract certain information from the text (e.g. the project type, client name etc.) and add that to the chunks, similar to GraphRAG.
 - There could also be a multi-step retrieval step, where the model first retrieves the most relevant case studies, and then the most relevant information from those.
+- Maybe one of the bigger improvements to my solution would be to provide the full document in the context window, rather than just the embedded chunks. Given the size of the articles, this seems doable, but might require some heuristics. 
 
 ## Model & prompt
 - Enabling the GPU vastly improved the speed on my M1 Macbook.
