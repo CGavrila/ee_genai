@@ -59,8 +59,9 @@ python -m pytest test/test_model.py  # Takes a bit longer.
 ## Model & prompt
 - Enabling the GPU vastly improved the speed on my M1 Macbook.
 - I set the temperature to 0.0, to make it more deterministic. A seed might be a good idea too.
-- I tried to keep the prompt as simple as possible, and focused on the task at hand. I do believe a bit more explanation about it's goal and role would be helpful.
+- I tried to keep the prompt as simple as possible, and focused on the task at hand. I do believe a bit more explanation about its goal and role would be helpful.
 - It might have the tendency to say "I don't know" when any subjective information is requested (e.g. "Tell me a cool fact about EE").
+- The prompt should be versioned in a production application. In the past, I've done this by having a template, separate from the actual code.
 
 ## Tests
 - As far as I see it, there are two different parts to this: the RAG part, and the LLM part (mostly the prompt, but also metaparameters). From the README, I see these are conflated, but technically, they are different parts that can fail for different reasons, hence the two tests (`test_rag` and `test_model`).
